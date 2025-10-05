@@ -5,7 +5,7 @@ const server = http.createServer((req, res) => {
  
    if (req.url === '/') {
        res.statusCode = 200;
-       res.end('Home New');
+       res.end('Home');
    } else if (req.url === '/sobre') {
        res.statusCode = 200;
        res.end('About page');
