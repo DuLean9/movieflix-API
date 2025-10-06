@@ -8,14 +8,13 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     plugins: { js }, 
     extends: ["js/recommended"], 
-    languageOptions: { globals: globals.node },
+    languageOptions: { globals: globals.node, parserOptions: {sourceType: "module"} },
     rules: {
       "no-console": "warn",
       "eqeqeq": ["error", "always"],
       "quotes": ["error", "double"],
       "semi": ["error", "always"],
-      "indent": ["error", 4],
-      "linebreak-style": ["error", "windows"],
+      "indent": ["error", 2],
       "no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "off",
     }
