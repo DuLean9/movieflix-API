@@ -54,3 +54,5 @@ coverage/
 
 # Biome
 .biome/
+
+/src/generated/prisma
