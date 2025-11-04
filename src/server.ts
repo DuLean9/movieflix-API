@@ -16,7 +16,21 @@ app.get("/movies", async (_, res) => {
     },
   });
   res.json(movies);
-  console.log("teste 2");
+});
+
+app.post("/movies", async (_, res) => {
+  await prisma.movie.create({
+    data: {
+      title: "Teste 2",
+      genre_id: 7,
+      language_id: 1,
+      oscar_count: 0,
+      release_date: new Date("2023-10-10"),
+    },
+  });
+
+  res.status(201).send();
+
 });
 
 app.listen(port, () => {
